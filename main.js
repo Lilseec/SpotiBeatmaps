@@ -7,20 +7,20 @@ async function authorization() {
 
             let idx = window.location.href.lastIndexOf('?code=') + 6
             let code = window.location.href.slice(idx)
-
+            console.log('Test:', code)
             let data = {
+                "code": code,
                 "client_id": 14338,
                 "client_secret": "lnB9AtwwoREgoAatHBnpDbFr93KabxwyQ2CPac0h",
-                "code": code,
-                "grant_type": "authorization_code",
-                'redirect_uri': "https:\/\/lilseec.github.io\/SpotiBeatmaps"
+                "redirect_uri": "https://lilseec.github.io/SpotiBeatmaps",
+                'grant_type': "authorization_code"
             }
             
             const response = await fetch(url, {
                 method: 'POST',
                 headers: {
                     "Accept": "application/json",
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/x-www-form-urlencoded"
                 },
                 body: JSON.stringify(data)
             })
