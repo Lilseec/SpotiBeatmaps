@@ -2,7 +2,7 @@ const authorizeBtn = document.getElementById('authorization')
 
 async function authorization() {
         let idx = window.location.href.lastIndexOf('?code=')
-        if (window.location.href.includes('?code')) {
+        if (window.location.href.includes('?')) {
             let url = ' https://osu.ppy.sh/oauth/token'
 
             let idx = window.location.href.lastIndexOf('?code=') + 6
