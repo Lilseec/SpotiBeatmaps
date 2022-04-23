@@ -13,7 +13,7 @@ async function authorization() {
                 "client_secret": "lnB9AtwwoREgoAatHBnpDbFr93KabxwyQ2CPac0h",
                 "code": code,
                 "grant_type": "authorization_code",
-                'redirect_uri': "https://lilseec.github.io/SpotiBeatmaps"
+                'redirect_uri': "https:\/\/lilseec.github.io\/SpotiBeatmaps"
             }
             
             const response = await fetch(url, {
