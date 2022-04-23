@@ -20,7 +20,7 @@ async function authorization() {
                 method: 'POST',
                 body: JSON.stringify(data),
                 headers: {
-                    'Access-Control-Allow-Origin': '*'
+                    'Access-Control-Allow-Origin': 'https://osu.ppy.sh'
                 }
             })
             const json = await response.json()
