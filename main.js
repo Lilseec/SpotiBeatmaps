@@ -18,10 +18,10 @@ async function authorization() {
             
             const response = await fetch(url, {
                 method: 'POST',
-                body: JSON.stringify(data),
                 headers: {
                     'Access-Control-Allow-Origin': 'https://osu.ppy.sh'
-                }
+                },
+                body: JSON.stringify(data)
             })
             const json = await response.json()
             console.log('Успех:', json);
